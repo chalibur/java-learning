@@ -37,3 +37,8 @@ public class ArrayDemo8 {
 /*
 细节:如何获得随机的索引
  */
+/*
+方法：
+
+public statcic
+ */
