@@ -1,4 +1,4 @@
-package com.itheima.staticvariabletest1;
+package com.itheima.staticvariabletest;
 
 public class Test {
     /*
