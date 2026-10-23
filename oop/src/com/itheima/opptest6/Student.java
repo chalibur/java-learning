@@ -9,7 +9,7 @@ package com.itheima.opptest6;
 4.打印大学毕业之后，张三的所有信息
  */
 
-import com.sun.tools.attach.AgentLoadException;
+
 
 public class Student {
     private String name;
@@ -50,7 +50,7 @@ public class Student {
     public int getweight(){
         return weight;
     }
-    public void studey(){
+    public void study(){
         System.out.println(name+"正在努力学习");
     }
 }
