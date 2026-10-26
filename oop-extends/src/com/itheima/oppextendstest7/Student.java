@@ -15,6 +15,15 @@ public class Student extends Person {
         this.grade = grade;
     }
     //成员方法
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
     public void study() {
         System.out.println("学生正在学习");
     }

@@ -13,7 +13,6 @@ public class GeneralTeacher extends Teacher{
 
     @Override
     public void Teach() {
-        super.Teach();
         System.out.println("教通识课知识");
     }
 }

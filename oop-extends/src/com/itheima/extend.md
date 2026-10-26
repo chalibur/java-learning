@@ -59,3 +59,25 @@
 >this内存的角度：表示该方法调用者的地址值
 > 
 > 当写了this表示调用其他的构造方法，本类的其他构造中就不能再出现super（）了。系统也不会再给你默认加上super关键字 
+### 继承的底层逻辑
+> 成员变量：
+> 
+> 可以被子类继承，private私有的也可以，但不能被直接调用
+
+>成员方法：
+> 
+> 虚方法可以被继承，但是被static，final，private修饰的方法不能被继承
+> 
+> >虚方法：被static，final，private修饰的方法不能被继承
+> 
+> 当父类被继承的时候，就会先生成一张虚方法表的内存地址，然后就会将这张虚方法表继承给子类，然后子类就会在虚方法表上面加上属于自己的方法地址，生成一张新的虚方法表
+> 
+### java中的权限修饰符
+>1.public：公共的，被public修饰的成员变量和成员方法， anywhere can access
+> 
+>2.空着不写，默认的：被default修饰的成员变量和成员方法， same package can access
+> 
+>3.protected：保护的，被protected修饰的成员变量和成员方法， same package can access， different package can access but only for son
+> 
+> 4.public 公共的：所有的包都可以访问> 
+

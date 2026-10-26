@@ -13,7 +13,7 @@ public class undergraduate extends Student {
 
     @Override
     public void study() {
-        super.study();
+
         System.out.println("本科生攻读学士学位");
     }
 }

@@ -15,10 +15,27 @@ public class Person {
         this.age = age;
     }
     //成员方法
-    public void Eat(){
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void eat(){
         System.out.println("吃吃吃");
     }
-    public void Sleep(){
+    public void sleep(){
         System.out.println("睡睡睡");
     }
 }
