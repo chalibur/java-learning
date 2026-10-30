@@ -39,3 +39,32 @@ public class leiming implements  jiekou{}
 > 继承关系，可以单继承，也可以多继承
 > >如果有一个接口继承了多个接口，那这个接口的实现类就需要把多个接口中的抽象方法全部重写
 > 如果在重写的时候出现的多个相同的抽象方法，重写一次就可以
+> 
+### JDk8之后接口新增的方法
+#### 默认方法
+> 接口里面可以有默认方法，格式：default
+    
+```java
+public default void function(){
+     System.out.println("接口中新增的默认方法");}
+```
+>     //接口中的新增的带有方法体的默认方法，不用强制重写
+> 
+#### 静态方法
+> 接口里面可以有静态方法，格式：static
+```java
+public static void function(){
+     System.out.println("接口中新增的静态方法");}
+```
+>     //接口中的新增的带有方法体的静态方法，不用强制重写
+> 
+> //只能通过接口名进行调用，不能通过类名或者对象名进行调用
+> 
+#### 私有方法
+> 接口里面可以有私有方法，格式：private
+```java
+public private void function(){
+     System.out.println("接口中新增的私有方法");}
+```
+//为了抽取接口中默认方法和静态代码中的重复代码而存在的
+
