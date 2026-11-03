@@ -2,10 +2,29 @@ package com.itheima.a01.apidemo3;
 
 public class Test3 {
     /*
-    Boolean euqals
-    Boolean equalIgnoreCase
-    需求：已知正确的用户名和密码，请用程序实现模拟用户登录
-     总共给三次机会，登录之后，给出相应的提示
-
+    需求：定义一个方法，把int数组中的数据按照指定的格式拼接成一个字符串返回，调用该方法，并在控制台输出结果
+    例如：
+    数组为int[] arr={1,2,3}
+    执行方法之后的输出结果为【1，2，3】
      */
+    public static String arrayToString(int[] arr){
+        String str="";
+        str=str+"[";
+        for (int i = 0; i < arr.length; i++) {
+
+            if(i==arr.length-1){
+                str=str+arr[i];
+            }else{
+                str=str+arr[i]+",";
+            }
+
+        }
+        str=str+"]";
+        return str;
+    }
+    public static void main(String[] args){
+        int [] arr={1,2,3,4,5,6,7};
+        System.out.println(arrayToString(arr));
+
+    }
 }
