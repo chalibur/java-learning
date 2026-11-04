@@ -1,5 +1,7 @@
 package com.itheima.a01.apidemo4;
 
+import java.util.Scanner;
+
 public class Test1 {
     /*
     数据脱敏：
@@ -16,6 +18,12 @@ public class Test1 {
         //定义一个字符串，用于存储用户输入的字符串
         String userName="zhangsan";
 
+        //获得一个用户的字符串
+        System.out.println("请输入一个字符串：");
+        Scanner sc=new Scanner(System.in);
+        String input=sc.next();
+        System.out.print(input.substring(0,1));
+        System.out.print("*".repeat(input.length()-1));
     }
 
 
