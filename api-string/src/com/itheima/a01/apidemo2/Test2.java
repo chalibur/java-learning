@@ -1,7 +1,6 @@
 package com.itheima.a01.apidemo2;
 
-import javax.lang.model.element.Name;
-import java.nio.charset.StandardCharsets;
+
 
 public class Test2 {
     public static void main(String[] args){
