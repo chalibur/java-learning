@@ -1,6 +1,6 @@
 package com.itheima.a01.apitest;
 
-import jdk.swing.interop.SwingInterOpUtils;
+
 
 import java.util.Scanner;
 
@@ -38,8 +38,9 @@ public class Test4 {
         for (int i = 0; i < result.length-1; i++) {
             result[i] = arr1[i] + arr2[i] + carry;
             if (result[i] >= 10) {
-                result[i] = result[i] % 10;
                 carry = result[i] / 10;
+                result[i] = result[i] % 10;
+
             } else {
                 carry = 0;
             }
