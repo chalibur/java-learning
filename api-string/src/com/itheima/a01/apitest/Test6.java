@@ -18,7 +18,7 @@ public class Test6 {
         //1.输入操作
         System.out.println("请输入一个字符串：");
         Scanner sc=new Scanner(System.in);
-        String str=sc.next();
+        String str=sc.nextLine();
         System.out.println("请输入一个字符：");
         char ch=sc.next().charAt(0);
 
