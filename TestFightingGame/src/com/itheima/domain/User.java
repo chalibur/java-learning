@@ -1,3 +1,5 @@
+package com.itheima.domain;
+
 import java.util.Random;
 
 public class User {
@@ -24,12 +26,14 @@ id：
     private String id;
     private String username;
     private String password;
-    private int state;
+    private boolean state;//如果FASLE表示禁用
 
     public User() {
+        id=createID();//id是自动创建的，并不是选择注册一个对象之后再去调用方法创造的，而是在创建对象的时候就自动生成了
+        state=true;
     }
 
-    public User(String id, String username, String password, int state) {
+    public User(String id, String username, String password, boolean state) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -41,8 +45,9 @@ id：
     }
     Random r = new Random();
     // 生成id,不能由用户自己设置，只能由heima+五位数字组成
-    public void setId( ) {
+    public String createID( ) {
         this.id = "heima"+r.nextInt(9)+r.nextInt(9)+r.nextInt(9)+r.nextInt(9)+r.nextInt(9);
+        return id;
     }
     //用户名唯一
     //长度必须在3 ~ 16位
@@ -52,22 +57,7 @@ id：
     }
 
     public void setUsername(String username) {
-        int count=0;
-        if(username.length()>=3&&username.length()<=16){
-            for (int i = 0; i < username.length(); i++) {
-                if(username.charAt(i)>='0'&&username.charAt(i)<='9')
-                    count++;
-            }
-            if(count!=username.length()){
                 this.username = username;
-            }
-            else{
-                System.out.println("用户名只能由字母、数字组成，不能是纯数字");
-            }
-        }else{
-            System.out.println("用户名长度必须在3 ~ 16位");
-        }
-
     }
 
     public String getPassword() {
@@ -75,18 +65,13 @@ id：
     }
 //长度3 ~ 8位
 //只能是字母加数字的组合，不能有其他字母
-    public void setPassword(String password) {
-        if(password.length()>=3&&password.length()<=8){
+    public void setPassword(String password) {this.password = password;}
 
-        }
-        this.password = password;
-    }
-
-    public int getState() {
+    public boolean getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState( boolean state) {
         this.state = state;
     }
 }
