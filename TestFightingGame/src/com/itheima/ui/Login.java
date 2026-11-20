@@ -66,6 +66,9 @@ public class Login {
             String password=sc.next();
             if(password.equals(list.get(index).getPassword())){
                 System.out.println("登录成功");
+                //创建FightingGame类的对象，并且调用方法启动游戏
+                FightingGame game=new FightingGame();
+                game.gameStart(username);
                 break;
             }
 
