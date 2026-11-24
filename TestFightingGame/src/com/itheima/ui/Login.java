@@ -60,7 +60,6 @@ public class Login {
                 }
                 System.out.println("验证码输入错误，请重新输入");
             }
-
             // 密码校验：每一轮都重新录入
             System.out.println("请输入密码：");
             String password=sc.next();
@@ -100,7 +99,7 @@ public class Login {
             }
 
             // 格式校验：只能字母和数字，且不能纯数字
-            int[] counts = getcount(username);
+            int[] counts = getcount(username);//定义一个username长度的数组来存储字母、数字、其他字符的个数
             if(counts[2] > 0){
                 System.out.println("用户名只能由字母、数字组成，请重新输入");
                 continue;
@@ -115,7 +114,7 @@ public class Login {
                 System.out.println("用户名已存在，请重新输入");
                 continue;
             }
-
+            //只有当一切条件全部满足之后，才调用setUsername函数，将用户名设置到u对象中
             u.setUsername(username);
             break;
         }
